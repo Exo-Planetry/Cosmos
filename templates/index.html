@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cosmos" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COSMOS</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link
+      rel="stylesheet"
+      href="/static/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/elegant-icons.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/owl.carousel.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/magnific-popup.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/slicknav.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="index.html"
+                ><img src="/static/img/logo.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li class="active">
+                    <a href="{{ url_for('home') }}">Home</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('explore', sec='explore') }}">Explore</a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section5') }}"
+                          >Habitability</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section1') }}"
+                          >Radial Velocity</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore' ,sec='from_section2') }}"
+                          >Transit Method</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section3') }}"
+                          >Direct Imaging</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section4') }}"
+                          >Biosignature</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#galaxy">Galaxy</a></li>
+                  <li><a href="{{ url_for('solar') }}">Solar System</a></li>
+                  <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="header__nav__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+      <div class="hero__slider owl-carousel">
+        <div class="hero__item set-bg" data-setbg="/static/img/hero/hero-1.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero__text">
+                  <span>For Astrophiles to</span>
+                  <h2>Explore Exoplanet</h2>
+                  <a href="#" class="primary-btn">See more about us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="/static/img/hero/hero-1.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero__text">
+                  <span>For Astrophiles to</span>
+                  <h2>Predict Exoplanet Habitability</h2>
+                  <a href="#" class="primary-btn">See more about us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="/static/img/hero/hero-1.jpg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="hero__text">
+                  <span>For Astrophiles to </span>
+                  <h2>Study Solar System</h2>
+                  <a href="#" class="primary-btn">See more about us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services spad" id="about" name="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="services__title">
+              <div class="section-title">
+                <span>Our work</span>
+                <h2>What We do?</h2>
+              </div>
+              <p>
+                This project uses advanced technology, including machine
+                learning and data analysis, to discover distant planets and
+                assess their potential to support life. It provides an
+                easy-to-use website to share information about these planets
+                through visual representations.
+              </p>
+              <a href="#" class="primary-btn">View more</a>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img src="/static/img/icons/si-1.png" alt="" />
+                  </div>
+                  <h4>Exoplanet Detection</h4>
+                  <p>
+                    Exoplanet detection is the process of identifying and
+                    confirming the presence of planets outside our solar system,
+                    known as exoplanets, through various observational methods,
+                    such as transit, radial velocity, and direct imaging.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img src="/static/img/icons/si-2.png" alt="" />
+                  </div>
+                  <h4>Analyzing Biosignature</h4>
+                  <p>
+                    Analyzing biosignatures of an exoplanet involves studying
+                    the chemical or atmospheric markers that may indicate the
+                    presence of life, such as the detection of certain gases or
+                    compounds that are indicative of biological processes..
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img src="/static/img/icons/si-3.png" alt="" />
+                  </div>
+                  <h4>Habitability Prediction</h4>
+                  <p>
+                    An exoplanet is considered habitable if it possesses
+                    conditions that could support life, including a stable and
+                    suitable environment, the presence of liquid water, and a
+                    suitable distance from its host star, often referred to as
+                    the "habitable zone."
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="services__item">
+                  <div class="services__item__icon">
+                    <img src="/static/img/icons/si-4.png" alt="" />
+                  </div>
+                  <h4>Reports and Summaries</h4>
+                  <p>
+                    A report on exoplanets would be a detailed document
+                    presenting research findings and data on these celestial
+                    bodies, while a summary would provide a concise overview of
+                    the key points and discoveries about exoplanets, typically
+                    for a more general audience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counter Section Begin -->
+    <section class="counter" id="galaxy">
+      <div class="container">
+        <div class="counter__content">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item">
+                <div class="counter__item__text">
+                  <img src="/static/img/icons/ci-1.png" alt="" />
+                  <h2 class="counter_num">5528</h2>
+                  <p>Exoplanet Confirmed</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item second__item">
+                <div class="counter__item__text">
+                  <img src="/static/img/icons/ci-2.png" alt="" />
+                  <h2 class="counter_num">4115</h2>
+                  <p>Planetary System</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item third__item">
+                <div class="counter__item__text">
+                  <img src="/static/img/icons/ci-3.png" alt="" />
+                  <h2 class="counter_num">934</h2>
+                  <p>Multiplanet Systems</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter__item four__item">
+                <div class="counter__item__text">
+                  <img src="/static/img/icons/ci-4.png" alt="" />
+                  <h2 class="counter_num">59</h2>
+                  <p>Habitable Exoplanet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Counter Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team spad set-bg" data-setbg="/static/img/team-bg.gif">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title team__title">
+              <span>Nice to meet</span>
+              <h2>OUR Team</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--second set-bg"
+              data-setbg="/static/img/team/team-1.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Rohan Kumar</h4>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--third set-bg"
+              data-setbg="/static/img/team/team-3.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Hemani Tekwani</h4>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 p-0">
+            <div
+              class="team__item team__item--four set-bg"
+              data-setbg="/static/img/team/team-4.jpg"
+            >
+              <div class="team__item__text">
+                <h4>Akshat Verma</h4>
+                <div class="team__item__social">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 p-0">
+            <div class="team__btn">
+              <a href="#" class="primary-btn">Meet Our Team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="/static/img/image1.png">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="callto__text">
+              <h2>Unlocking the Secrets of Exoplanets, One Click at a Time.</h2>
+              <p>Exploring the Cosmos, One Exoplanet at a Time.</p>
+              <a href="/templates/explore.html">Start your StellarVoyage.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="footer__top__logo">
+                <a href="#"><img src="/static/img/logo.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="footer__top__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__option">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="footer__option__item">
+                <h5>About us</h5>
+                <p>Formed in 2023 by Rohan, Hemani & Akshat</p>
+                <a href="#" class="read__more"
+                  >Read more <span class="arrow_right"></span
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+              <div class="footer__option__item">
+                <h5>Who we are</h5>
+                <ul>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Carrers</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Locations</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3">
+              <div class="footer__option__item">
+                <h5>Our work</h5>
+                <ul>
+                  <li><a href="#">Exoplanet Detection</a></li>
+                  <li><a href="#">Analyzing Biosignature</a></li>
+                  <li><a href="#">Habitability Prediction</a></li>
+                  <li><a href="#">Reports and Summaries</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="footer__option__item">
+                <h5>Reach Us</h5>
+                <p><b>Exploring the Cosmos, One Exoplanet at a Time.</b></p>
+                <form action="#">
+                  <input type="text" placeholder="Email" />
+                  <button type="submit"><i class="fa fa-send"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <p class="footer__copyright__text">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Cosmos | All rights reserved
+              </p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/mixitup.min.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/jquery.slicknav.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    background-color: black; /* Set the background color of the page to black */
+}
+#description-container, #caption-container {
+    color: white;
+}
+
+
+#carouselExampleIndicators {
+  width: 600px;
+  height: 600px;
+    margin: auto; /* Center the carousel on the page */
+}
+
+.carousel-inner {
+    max-height: 100%; /* Adjust the maximum height as per your design */
+}
+
+.carousel-item img {
+    width: 100%; /* Make the images fill the entire carousel width */
+    height: 100%; /* Make the images fill the entire carousel height */
+    object-fit: cover; /* Ensure the aspect ratio is maintained while covering the entire area */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Adjust the width of the navigation arrows */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px; /* Adjust the size of the navigation arrow icons */
+    height: 30px;
+}
+
+/* Optional: Add some spacing or margin for better visual appearance */
+.carousel-control-prev {
+    margin-left: -20px;
+}
+
+.carousel-control-next {
+    margin-right: -20px;
+}
+
+
+/* Style toggle button and initially hide planet information or moon list */
+.toggle-btn {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.planet-info,
+.moon-list {
+    list-style-type: square;
+    margin-left: 20px;
+    display: none;
+    /* Initially hide planet information or moon list */
+}
+
+/* Show planet information or moon list when the "show" class is present */
+.planet-info.show,
+.moon-list.show {
+    display: block;
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    color: palegreen;
+}
+
+section li {
+    color: rgb(120, 0, 240);
+}
+
+section h4 {
+    color: rgb(86, 88, 95);
+}
+section h3 {
+    color: rgb(86, 88, 95);
+}
+/* .planet-section {
+  display: flex;
+    flex: 1;
+  padding: 20px;
+
+}
+.planet-section img {
+  display: block;
+}
+
+
+.planet-section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.planet-section h4 {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.planet-section li {
+  color: #777;
+  margin-bottom: 4px;
+} */
+
+
+.container {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.text {
+  color: aliceblue;
+    flex: 1;
+    padding: 20px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.image img {
+    height: auto;
+    display: block;
+}
+
+.planet-section {
+ margin: 45px 0;
+}

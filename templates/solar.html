@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cosmos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COSMOS</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/solar.css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="/templates/index.html"><img src="/static/img/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <ul>
+                                <li class="active">
+                                    <a href="/templates/index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/templates/explore.html">Explore</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="{{ url_for('explore',sec='from_section1') }}">Radial Velocity</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('explore' ,sec='from_section1') }}">Transit Method</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('explore',sec='from_section1') }}">Direct Imaging</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url_for('explore',sec='from_section1') }}">Biosignature</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#galaxy">Galaxy</a></li>
+                                <li><a href="#galaxy">Solar System</a></li>
+                                <li><a href="/templates/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+
+
+
+    <!-- Services Section Begin -->
+    <section class="services spad" id="about" name="about">
+
+        <div class="container">
+            <div class="row">
+                <section id="Sun" class="planet-section">
+
+                    <div class="container">
+                        <div class="text">
+                            <h2>Sun</h2>
+                            <p>Chemical Composition:
+
+                                Core: Primarily hydrogen (~74%) and helium (~24%).
+                                Trace amounts of heavier elements such as oxygen, carbon, neon, and iron.
+                                Characteristics:
+
+                                Fusion reactions occur in the core, generating immense energy through nuclear fusion.
+                                Life Possibilities:
+
+                                Not habitable, but its energy sustains life on Earth.
+                            <p>
+                        </div>
+                        <div class="image">
+                            <img src="/static/img/planet/sun.jpg" alt="Mercury Image">
+                        </div>
+                    </div>
+                    <!-- Add more information about Mercury as needed -->
+                </section>
+                <section id="mercury" class="planet-section">
+                    <div class="container">
+                        <div class="text">
+                            <h2>Mercury</h2>
+
+                            <p>Mercury is the closest planet to the Sun. It has a rocky surface and experiences extreme
+                                temperature
+                                variations...
+                                Chemical Composition:
+
+                                Mostly silicate rock and metal.
+                                Characteristics:
+
+                                No atmosphere, extreme temperature fluctuations between day and night.
+                                Life Possibilities:
+
+                                Unlikely due to extreme temperatures and lack of atmosphere.</p>
+                        </div>
+                        <div class="image">
+                            <img src="/static/img/planet/mercury.jpg" alt="Mercury Image">
+                        </div>
+                    </div>
+                    <ul class="planet-info">
+                        <li>Mercury has a thin atmosphere and a predominantly rocky composition.</li>
+                        <li>It has a very slow rotation, completing only about 1.5 rotations per orbit around
+                            the Sun.
+                        </li>
+                        <!-- Add more information about Mercury as needed -->
+                    </ul>
+
+
+                </section>
+
+                <section id="earth" class="planet-section">
+                    <div class="container">
+                        <div class="text">
+                            <h2>Earth</h2>
+
+                            <p>Chemical Composition:
+
+                                Mostly iron, oxygen, silicon, magnesium, sulfur, nickel, and calcium.
+                                Characteristics:
+
+                                Liquid water, diverse ecosystems, a protective atmosphere, and moderate temperatures.
+                                Life Possibilities:
+
+                                Supports a vast range of life forms due to its unique conditions.</p>
+
+                            <h3>Moon of Earth</h3>
+                            <ul>
+                                <li>Luna - Known for its intense creters.</li>
+                                <li>Theia - Formed from Earth's mantle after an impact with Mars.</li>
+                            </ul>
+                        </div>
+                        <div class="image">
+                            <img src="/static/img/planet/earth.jpg" alt="Earth Image">
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="mars" class="planet-section">
+                    <div class="container">
+                        <div class="text">
+                            <h2>Mars</h2>
+
+                            <p>Mars is the fourth planet from the Sun and is known for its reddish appearance. It has a
+                                thin
+                                atmosphere, evidence of past liquid water, and a diverse landscape...
+                                Chemical Composition:
+
+                                Rocky surface with a thick atmosphere mainly composed of carbon dioxide and clouds of
+                                sulfuric
+                                acid.
+                                Characteristics:
+
+                                Extreme greenhouse effect, high surface temperatures, and surface pressure.
+                                No moons, retrograde rotation.
+                                Life Possibilities:
+
+                                Harsh conditions make it inhospitable for life as we know it.</p>
+                            <ul class="moon-list">
+                                <li>Phobos - The larger moon of Mars with an irregular shape.</li>
+                                <li>Deimos - The smaller moon, also irregularly shaped.</li>
+                                <!-- Add more moons of Mars as needed -->
+                            </ul>
+                        </div>
+                        <div class="image">
+                            <img src="/static/img/planet/mars.jpg" alt="Mars Image">
+                        </div>
+                    </div>
+
+                    <section id="jupiter"class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h2>Jupiter</h2>
+
+                                <p>Jupiter is the largest planet in our solar system, primarily composed of
+                                    hydrogen and
+                                    helium. It has a dynamic atmosphere with prominent cloud bands, including
+                                    the Great Red
+                                    Spot...
+                                    Chemical Composition:
+
+                                    Primarily hydrogen and helium.
+                                    Characteristics:
+
+                                    Extensive atmosphere with cloud bands, powerful storms (e.g., Great Red
+                                    Spot).
+                                    Life Possibilities:
+
+                                    No solid surface, extreme radiation and pressure make life improbable.</p>
+                                <h3>Moons of Jupiter</h3>
+                                <ul>
+                                    <li>Io - Known for its intense volcanic activity.</li>
+                                    <li>Europa - Ice-covered moon with a subsurface ocean.</li>
+                                    <li>Ganymede - The largest moon in the solar system with its own magnetic
+                                        field.</li>
+                                    <li>Callisto - Heavily cratered moon with a thin atmosphere.</li>
+                                </ul>
+
+                            </div>
+                            <div class="image">
+                                <img src="/static/img/planet/jupiter.jpg" alt="Jupiter Image">
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="saturn" class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h2>Saturn</h2>
+
+                                <p>Saturn is renowned for its stunning ring system, composed mainly of ice
+                                    particles and
+                                    dust. The planet itself is a gas giant with a complex atmospheric
+                                    structure...
+                                    Chemical Composition:
+
+                                    Similar to Jupiter, mostly hydrogen and helium.
+                                    Characteristics:
+
+                                    Iconic ring system, diverse moon system, and hexagonal storm on the north
+                                    pole.
+                                    Life Possibilities:
+
+                                    Unlikely due to extreme conditions.</p>
+                                <h3>Moons of Saturn</h3>
+                                <ul>
+                                    <li>Enceladus - Moon with active geysers venting water vapor into space.
+                                    </li>
+                                    <li>Mimas - Known for a large crater resembling the Death Star.</li>
+                                    <li>Iapetus - Exhibits a two-toned appearance with a dark leading hemisphere
+                                        and a bright
+                                        trailing hemisphere.</li>
+                                </ul>
+                            </div>
+                            <div class="image">
+                                <img src="/static/img/planet/saturn.jpg" alt="Saturn Image">
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="uranus" class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h2>Uranus</h2>
+
+                                <p>Uranus is an ice giant with a unique tilt in its rotational axis, causing
+                                    extreme seasonal
+                                    variations. It has a faint ring system and a bluish-green appearance due to
+                                    methane in
+                                    its atmosphere...
+                                    Chemical Composition:
+
+                                    Primarily hydrogen and helium with traces of methane.
+                                    Characteristics:
+
+                                    Tilted axis, unique rotational pattern, icy composition.
+                                    Life Possibilities:
+
+                                    Unlikely due to extreme conditions and lack of surface features.</p>
+                                <h3>Moons of Uranus</h3>
+                                <ul>
+                                    <li>Miranda - Moon with unique geological features, including large fault
+                                        canyons.</li>
+                                    <li>Titania - The largest moon of Uranus with varied geological features.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="image">
+                                <img src="/static/img/planet/uresnus.jpg" alt="Uranus Image">
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section id="neptune"class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h2>Neptune</h2>
+
+                                <p>Neptune is the farthest planet from the Sun and has a dynamic atmosphere with
+                                    fast winds.
+                                    It has a prominent dark spot and a diverse set of moons...
+                                    Chemical Composition:
+
+                                    Similar to Uranus, hydrogen, helium, and traces of methane.
+                                    Characteristics:
+
+                                    Dynamic weather patterns, the Great Dark Spot, and the fastest winds in the
+                                    solar system.
+                                    Life Possibilities:
+
+                                    Unlikely due to extreme conditions and lack of a solid surface.</p>
+                                <h3>Moons of Neptune</h3>
+                                <ul>
+                                    <li>Triton - Moon with a retrograde orbit and active geysers spewing
+                                        nitrogen gas.</li>
+                                </ul>
+                            </div>
+                            <div class="image">
+                                <img src="/static/img/planet/neptune.jpg" alt="Neptune Image">
+                            </div>
+                        </div>
+
+                    </section>
+                    <section id="dwarf-planets" class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h2>Dwarf Planets</h2>
+                                <p>Dwarf planets are celestial bodies that orbit the Sun and share
+                                    characteristics with planets
+                                    but
+                                    have
+                                    not cleared their orbits. Two notable examples are Pluto and Eris...</p>
+
+                                <h4>Pluto</h4>
+
+
+                                <p>Pluto is a dwarf planet in the Kuiper Belt. It has a thin atmosphere and a
+                                    diverse surface
+                                    with
+                                    icy
+                                    mountains...</p>
+                            </div>
+                            <div class="image">
+                                <img src="/static/img/planet/pluto.jpg" alt="Pluto Image">
+                            </div>
+                    </section>
+                    <section id="dwarf-planets" class="planet-section">
+                        <div class="container">
+                            <div class="text">
+                                <h4>Eris</h4>
+                                <p>Eris is another dwarf planet in the scattered disc of the outer solar system.
+                                    Its discovery
+                                    led
+                                    to
+                                    the reclassification of Pluto...</p>
+                            </div>
+                            <div class="image">
+                                <<img src="/static/img/planet/eris.jpg" alt="Eris Image">
+                            </div>
+                        </div>
+
+                    </section>
+
+
+
+            </div>
+
+    </section>
+
+    <!-- Js Plugins -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/mixitup.min.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/jquery.slicknav.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cosmos" />
+    <meta name="keywords" content="Videograph, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>COSMOS</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Styles -->
+    <link
+      rel="stylesheet"
+      href="/static/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/elegant-icons.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/owl.carousel.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/magnific-popup.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/css/slicknav.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+
+    <style>
+      body {
+        background: #100028;
+        margin: 0;
+        padding: 0;
+        font-family: "Play", sans-serif;
+        color: #fff;
+      }
+
+      /* Add this style for better mobile experience */
+      .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      /* Add this style to make the header more responsive */
+      .header__nav__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .dropdown-container {
+        padding-top: 50px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        color: aliceblue;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        text-align: left;
+        z-index: 1;
+        background-color: #fff;
+        width: 200px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.866);
+        border-radius: 4px;
+      }
+
+      .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .dropdown-content a:hover {
+        background-color: rgb(142, 109, 232);
+      }
+
+      .dropdown-container.active .dropdown-content {
+        display: block;
+      }
+
+      .form-section {
+        display: none;
+      }
+      .form-section.active {
+        display: block;
+      }
+      .fresult{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+        padding: 20px; /* Adjust the padding as needed */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        margin-top: 20px; /* Adjust the margin as needed */
+        text-align: center; /* Center the text */
+      }
+
+      /* Add media queries for better responsiveness */
+      @media only screen and (max-width: 768px) {
+        .header__nav__menu {
+          display: none;
+        }
+
+        .header__nav__social {
+          display: none;
+        }
+
+        #mobile-menu-wrap {
+          display: block;
+        }
+
+        .header__nav__option {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section Begin -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="header__logo">
+              <a href="{{ url_for('home') }}"
+                ><img src="/static/img/logo.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            <div class="header__nav__option">
+              <nav class="header__nav__menu mobile-menu">
+                <ul>
+                  <li class="active">
+                    <a href="{{ url_for('home') }}">Home</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('explore', sec='explore') }}">Explore</a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section5') }}"
+                          >Habitability</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section1') }}"
+                          >Radial Velocity</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore' ,sec='from_section2') }}"
+                          >Transit Method</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section3') }}"
+                          >Direct Imaging</a
+                        >
+                      </li>
+                      <li>
+                        <a href="{{ url_for('explore',sec='from_section4') }}"
+                          >Biosignature</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="{{ url_for('home') }}">About</a></li>
+                  <li><a href="{{ url_for('home') }}">Galaxy</a></li>
+                  <li><a href="{{ url_for('solar') }}">Solar System</a></li>
+                  <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+              </nav>
+              <div class="header__nav__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Dropdown for Form Selection -->
+    <div class="container">
+      <div class="dropdown-container active">
+        <label for="formSelector">Select Method:</label>
+        <div class="dropdown-content" id="formDropdown">
+          <a href="#" onclick="selectMethod('form-section5')">Habitability</a>
+          <a href="#" onclick="selectMethod('form-section1')"
+            >Radial Velocity</a
+          >
+          <a href="#" onclick="selectMethod('form-section2')">Transit Method</a>
+          <a href="#" onclick="selectMethod('form-section3')">Direct Imaging</a>
+          <a href="#" onclick="selectMethod('form-section4')">Biosignature</a>
+          
+        </div>
+      </div>
+    </div>
+<!-- Form Section 5 -->
+<section id="form-section5" class="form-section active">
+  <h2 style="text-align: center; color: rgb(0, 0, 0)">
+    Habitablity Prediction
+  </h2>
+  <div class="container">
+<form class="custom-form" action="/predict" method="post">
+
+ <!-- Add input fields for each column -->
+    <label for="pl_orbper">pl_orbper:</label>
+    <input type="text" name="pl_orbper" required><br>
+
+    <label for="pl_rade">pl_rade:</label>
+    <input type="text" name="pl_rade" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_orbeccen" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_orbincl" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_tranmid" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_imppar" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_trandep" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_trandur" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_ratdor" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="pl_ratror" required><br>
+
+    <label for="pl_orbeccen">pl_orbeccen:</label>
+    <input type="text" name="sy_vmag" required><br>
+
+    <!-- Add other input fields here -->
+
+    <label for="sy_kmag">sy_kmag:</label>
+    <input type="text" name="sy_kmag" required><br>
+
+    <!-- Add a submit button -->
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Display the result -->
+{% if ttv_flag is defined %}
+    <p class="fresult">Result (ttv_flag): {{ ttv_flag }}</p>
+{% endif %}
+
+    
+  </div>
+</section>
+    <!-- Form Section 1 -->
+    <section id="form-section1" class="form-section">
+      <h2 style="text-align: center; color: rgb(0, 0, 0)">
+        Radial Velocity Method
+      </h2>
+      <div class="container">
+        <form class="custom-form">
+          <label for="input1">Temperature:</label>
+          <input type="text" id="input1" name="input1" />
+
+          <label for="input2">Radius:</label>
+          <input type="text" id="input2" name="input2" />
+
+          <label for="input3">Distance:</label>
+          <input type="text" id="input3" name="input3" />
+
+          <label for="output">Predicted Planet:</label>
+          <output id="output1" name="output"></output>
+
+          <button
+            type="button"
+            onclick="calculate('form-section1')"
+            id="result"
+          >
+            Calculate
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Form Section 2 -->
+    <section id="form-section2" class="form-section">
+      <h2 style="text-align: center; color: rgb(0, 0, 0)">Transit Method</h2>
+      <div class="container">
+        <form class="custom-form">
+          <label for="input1">Input 1:</label>
+          <input type="text" id="input1" name="input1" />
+
+          <label for="input2">Input 2:</label>
+          <input type="text" id="input2" name="input2" />
+
+          <label for="input3">Input 3:</label>
+          <input type="text" id="input3" name="input3" />
+
+          <label for="output">Output:</label>
+          <output id="output2" name="output"></output>
+
+          <button
+            type="button"
+            onclick="calculate('form-section2')"
+            id="result"
+          >
+            Calculate
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Form Section 3 -->
+    <section id="form-section3" class="form-section">
+      <h2 style="text-align: center; color: rgb(0, 0, 0)">
+        Direct Imaging Method
+      </h2>
+      <div class="container">
+        <form class="custom-form">
+          <label for="input1">Input 1:</label>
+          <input type="text" id="input1" name="input1" />
+
+          <label for="input2">Input 2:</label>
+          <input type="text" id="input2" name="input2" />
+
+          <label for="input3">Input 3:</label>
+          <input type="text" id="input3" name="input3" />
+
+          <label for="output">Output:</label>
+          <output id="output3" name="output"></output>
+
+          <button
+            type="button"
+            onclick="calculate('form-section3')"
+            id="result"
+          >
+            Calculate
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Form Section 4 -->
+    <section id="form-section4" class="form-section">
+      <h2 style="text-align: center; color: rgb(0, 0, 0)">
+        Biosignature Method
+      </h2>
+      <div class="container">
+        <form class="custom-form">
+          <label for="input1">Input 1:</label>
+          <input type="text" id="input1" name="input1" />
+
+          <label for="input2">Input 2:</label>
+          <input type="text" id="input2" name="input2" />
+
+          <label for="input3">Input 3:</label>
+          <input type="text" id="input3" name="input3" />
+
+          <label for="output">Output:</label>
+          <output id="output4" name="output"></output>
+
+          <button
+            type="button"
+            onclick="calculate('form-section4')"
+            id="result"
+          >
+            Calculate
+          </button>
+        </form>
+      </div>
+    </section>
+
+    
+
+
+    <!-- Js Plugins -->
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/mixitup.min.js"></script>
+    <script src="/static/js/masonry.pkgd.min.js"></script>
+    <script src="/static/js/jquery.slicknav.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+    <!-- Custom JavaScript for dropdown and form functionality -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Hide all form sections on page load
+    var formSections = document.getElementsByClassName("form-section");
+    for (var i = 0; i < formSections.length; i++) {
+      formSections[i].classList.remove("active");
+    }
+
+    // Show the first form section
+    var firstFormSection = document.getElementById("form-section5");
+    if (firstFormSection) {
+      firstFormSection.classList.add("active");
+    }
+  });
+
+  function selectMethod(formId) {
+    // Hide all form sections
+    var formSections = document.getElementsByClassName("form-section");
+    for (var i = 0; i < formSections.length; i++) {
+      formSections[i].classList.remove("active");
+    }
+
+    // Show the selected form section
+    var selectedFormSection = document.getElementById(formId);
+    if (selectedFormSection) {
+      selectedFormSection.classList.add("active");
+    }
+  }
+
+  function calculate(formId) {
+    // Implement your calculation logic here
+    // For now, let's just alert a message
+    alert("Calculating for " + formId);
+  }
+
+  function calculateHabitable() {
+    var value1 = document.getElementById("input1").value;
+    var value2 = document.getElementById("input2").value;
+    var value3 = document.getElementById("input3").value;
+    var value4 = document.getElementById("input4").value;
+    var value5 = document.getElementById("input5").value;
+    var value6 = document.getElementById("input6").value;
+    var value7 = document.getElementById("input7").value;
+    var value8 = document.getElementById("input8").value;
+    var value9 = document.getElementById("input9").value;
+    var value10 = document.getElementById("input10").value;
+    var value11 = document.getElementById("input11").value;
+    var value12 = document.getElementById("input12").value;
+
+    $.ajax({
+      url: '/predict',
+      type: 'POST',
+      data: {
+        'feature_1': value1,
+        'feature_2': value2,
+        'feature_3': value3,
+        'feature_4': value4,
+        'feature_5': value5,
+        'feature_6': value6,
+        'feature_7': value7,
+        'feature_8': value8,
+        'feature_9': value9,
+        'feature_10': value10,
+        'feature_11': value11,
+        'feature_12': value12,
+      },
+      success: function (response) {
+        console.log(response);
+        document.getElementById("output").innerHTML = "<p>Output: " + response.result + "</p>";
+      },
+      error: function (error) {
+        console.log(error);
+      }
+    });
+  }
+</script>
+
+  </body>
+</html>
