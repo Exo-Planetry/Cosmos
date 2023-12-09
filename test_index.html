@@ -1,0 +1,25 @@
+from django.test import TestCase
+   from django.urls import reverse
+   ```
+
+3. Create a test class that inherits from `TestCase`:
+   ```python
+   class IndexPageTests(TestCase):
+       def test_index_page_links(self):
+           # Test the links in the index page
+           response = self.client.get(reverse('index'))
+           self.assertEqual(response.status_code, 200)
+           self.assertContains(response, '<a href="/templates/explore.html#form-section1">Radial Velocity</a>')
+           self.assertContains(response, '<a href="/templates/explore.html#form-section2">Transit Method</a>')
+           self.assertContains(response, '<a href="/templates/explore.html#form-section3">Direct Imaging</a>')
+           self.assertContains(response, '<a href="/templates/explore.html#form-section4">Biosignature</a>')
+   ```
+
+4. In the `test_index_page_links` method, we make a GET request to the index page using the `self.client.get` method. Then we assert that the response status code is 200 (indicating a successful request) and that the response contains the expected links.
+
+5. Finally, run the tests by executing the following command in your terminal:
+   ```bash
+   python manage.py test
+   ```
+
+Here's the updated code with the tests included:
